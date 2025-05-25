@@ -22,13 +22,13 @@ Here is a simple example which would add a
 */
 
 
-function getEndpointsfppBigButtons() {
+function getEndpointsIkspres() {
     $result = array();
 
     $ep = array(
         'method' => 'GET',
-        'endpoint' => 'version',
-        'callback' => 'fppBigButtonsVersion');
+        'endpoint' => 'wip-state',
+        'callback' => 'wipState');
 
     array_push($result, $ep);
 
@@ -36,9 +36,9 @@ function getEndpointsfppBigButtons() {
 }
 
 // GET /api/plugin/fpp-BigButtons/version
-function fppBigButtonsVersion() {
+function wipState() {
     $result = array();
-    $result['version'] = 'fpp-BigButtons v1.2.3';
+    $result['wipState'] = 'unavailable';
 
     return json($result);
 }
