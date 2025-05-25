@@ -15,7 +15,7 @@ $menuEntries = Array(
 	Array(
 		'text' => 'Ikspres',
 		'type' => 'status',
-		'page' => 'status.php',
+		'page' => 'dashboard.php',
 		'wrap' => 1
 	)
 #	Array(
