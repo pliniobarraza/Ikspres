@@ -1,11 +1,11 @@
 [
-{ "name": "Template Plugin On",
-  "script": "on.sh",
+{ "name": "wɪp Entagle",
+  "script": "entangle.sh",
   "args": [
   ]
 },
-{ "name": "Template Plugin Off",
-  "script": "off.sh",
+{ "name": "wɪp DisEntagle",
+  "script": "disentangle.sh",
   "args": [
   ]
 }
