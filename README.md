@@ -1,3 +1,2 @@
-# fpp-plugin-Template
-Template plugin for FPP Plugin developers
-
+# fpp-Ikspres
+FPP plugin for the Ikspres creative expression framework
