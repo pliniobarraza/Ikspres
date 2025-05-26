@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "Running fpp-plugin-Template PreStart Script"
+#SERIAL RELAY
+/usr/bin/socat -u -d -d pty,link=/dev/ttyAMA1,echo=0,perm=0777 pty,link=/dev/ttyAMA2,echo=0,perm=0777
 
