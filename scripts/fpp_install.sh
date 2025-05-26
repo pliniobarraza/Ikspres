@@ -1,4 +1,2 @@
 #!/bin/bash
-
-# fpp-plugin-Template install script
-
+whoami > who
