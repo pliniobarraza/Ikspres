@@ -1,2 +1,2 @@
 #!/bin/bash
-whoami > who
+whoami > /home/fpp/who
