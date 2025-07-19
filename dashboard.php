@@ -15,6 +15,8 @@
     <li>{G} = Genre</li></ul>
   </div>
   <h2>MQTT</h2><div class="callout callout-default">H2</div>
+
+  <button name="ReinstallScript" onClick="">Reinstall plugin dependencies</button>
   HERE WE WILL BE ABLE TO CONFIGURE AND CONTROLL IKSPRESS
 
 
