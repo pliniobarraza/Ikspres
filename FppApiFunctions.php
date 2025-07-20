@@ -1,7 +1,7 @@
 <?
 
 
-function fppApiIkspresSetting(setting){
+function fppApiIkspresSetting($setting){
   $url = 'http://localhost/api/plugin/Ikspres/settings/'.$setting;
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_HTTPGET, true);
