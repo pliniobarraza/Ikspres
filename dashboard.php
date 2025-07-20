@@ -1,14 +1,13 @@
 
 
 <h1>FPP-ɪkspres</h1>
-
-
 <div class="backdrop fppPluginEntryBackdrop">
+  <h2>wɪp</h2>
   <div class="row">
-    <div class="col-lg-3"><h3 class="pluginTitle">Ikspres</h3>
-    <div class="col-lg-3"><h3 class="pluginTitle">Ikspres</h3>
+    <div class="col-lg-3"><h3 class="pluginTitle">wɪp</h3>
   </div>
   <div class="row">
+    <div class="col-lg-3"><h3 class="pluginTitle">Ikspres</h3>
   </div>
   <div class="text-success fppPluginEntryInstallStatus">
     <i class="far fa-check-circle"></i> <b>Installed</b>
