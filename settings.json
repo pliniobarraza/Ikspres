@@ -13,6 +13,7 @@
         "WipModel": {
             "description": "Wip Model Configuration",
             "settings": [
+                "WipEnable",
                 "BleAddress",
                 "ArtNetTriggerOEMCode"
             ]
@@ -20,7 +21,7 @@
     },
     "settings": {
         "BleAddress": {
-            "name": "ArtNetTriggerEnabled",
+            "name": "WipEnable",
             "description": "Enable ArtNet Trigger Processing",
             "tip": "Enable ArtNet Trigger Processing",
             "restart": 1,
@@ -33,10 +34,10 @@
                 ]
             }
         },
-        "ArtNetTriggerOEMCode": {
-            "name": "ArtNetTriggerOEMCode",
-            "description": "OEM Code (hex) for Trigger",
-            "tip": "The OEM Code to look for to process triggers.  The payload will be a FPP Command JSON.",
+        "BleAddress": {
+            "name": "BleAddress",
+            "description": "Address of BLE device",
+            "tip": "If unknow, use the Discover Function",
             "restart": 1,
             "reboot": 0,
             "default": "0x21s00",
