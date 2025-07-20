@@ -13,23 +13,23 @@
 
 $menuEntries = Array(
 	Array(
-		'text' => 'Ikspres',
+		'text' => 'Ikspres Status',
 		'type' => 'status',
 		'page' => 'dashboard.php',
 		'wrap' => 1
 	)
-#	Array(
-#		'text' => 'Template - Content Setup',
-#		'type' => 'content',
-#		'page' => 'content.php',
-#		'wrap' => 1
-#	),
-#	Array(
-#		'text' => 'Template - Output',
-#		'type' => 'output',
-#		'page' => 'output.php',
-#		'wrap' => 1
-#	),
+	Array(
+		'text' => 'Ikspres Config',
+		'type' => 'content',
+		'page' => 'content.php',
+		'wrap' => 1
+	),
+	Array(
+		'text' => 'Ikspress Models',
+		'type' => 'output',
+		'page' => 'output.php',
+		'wrap' => 1
+	)
 #	Array(
 #		'text' => 'Template - Help',
 #		'type' => 'help',
