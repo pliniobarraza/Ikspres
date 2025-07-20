@@ -40,10 +40,10 @@
             "tip": "If unknow, use the Discover Function",
             "restart": 1,
             "reboot": 0,
-            "default": "0x21s00",
+            "default": "9C:1D:58:13:D1:90",
             "type": "text",
-            "size": 6,
-            "maxlength": "6"
+            "size": 17,
+            "maxlength": "17"
         },
         "ArtNetTimeCodeEnabled": {
             "name": "ArtNetTimeCodeEnabled",
