@@ -14,9 +14,7 @@
             "description": "Wip Model Configuration",
             "settings": [
                 "WipEnable",
-                "BleAddress",
-                "ArtNetTriggerOEMCode"
-            ]
+                "BleAddress"            ]
         }
     },
     "settings": {
