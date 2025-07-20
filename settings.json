@@ -1,506 +1,122 @@
 {
     "settingGroups": {
-        "DynRDSRDSSettings": {
-            "description": "RDS Settings",
+        "LocalModel": {
+            "description": "Local Model Configuration",
             "settings": [
-                "DynRDSEnableRDS",
-                "DynRDSPSUpdateRate",
-                "DynRDSPSStyle",
-                "DynRDSRTUpdateRate",
-                "DynRDSRTSize",
-                "DynRDSRTStyle",
-                "DynRDSPty",
-                "DynRDSPICode"
+                "ArtNetTimeCodeEnabled",
+                "ArtNetTimeCodeType",
+                "ArtNetTimeCodeProcessing",
+                "ArtNetTimeCodeTarget",
+                "ArtNetSyncPlaylist"
             ]
         },
-        "DynRDSTransmitterSettings": {
-            "description": "Transmitter Type and Common Settings",
+        "WipModel": {
+            "description": "Wip Model Configuration",
             "settings": [
-                "DynRDSTransmitter",
-                "DynRDSFrequency",
-                "DynRDSPreemphasis"
-            ]
-        },
-        "DynRDSAudioSettings": {
-            "description": "Audio Settings",
-            "settings": [
-                "DynRDSQN8066Gain",
-                "DynRDSQN8066SoftClipping",
-                "DynRDSQN8066AGC",
-                "DynRDSSi4713TestAudio"
-            ]
-        },
-        "DynRDSPowerSettings": {
-            "description": "Power Settings",
-            "settings": [
-                "DynRDSQN8066ChipPower",
-                "DynRDSQN8066PIPWM",
-                "DynRDSQN8066AmpPower"
-            ]
-        },
-        "DynRDSPluginActivation": {
-            "description": "Plugin Activation",
-            "settings": [
-                "DynRDSStart",
-                "DynRDSStop"
-            ]
-        },
-        "DynRDSLogLevel": {
-            "description": "Log Levels",
-            "settings": [
-                "DynRDSCallbackLogLevel",
-                "DynRDSEngineLogLevel"
-            ]
-        },
-        "DynRDSmpc": {
-            "description": "MPC / After Hours Music",
-            "settings": [
-                "DynRDSmpcEnable"
-            ]
-        },
-        "DynRDSmqtt": {
-            "description": "MQTT",
-            "settings": [
-                "DynRDSmqttEnable"
-            ]
-        },
-        "DynRDSAdv": {
-            "description": "Advanced Options",
-            "settings": [
-                "DynRDSAdvPISoftwareI2C",
-                "DynRDSAdvPIPWMPin",
-                "DynRDSAdvBBBPWMPin"
+                "BleAddress",
+                "ArtNetTriggerOEMCode"
             ]
         }
     },
     "settings": {
-        "DynRDSTransmitter": {
-            "name": "DynRDSTransmitter",
-            "description": "Transmitter Type (Auto-Selected)",
-            "tip": "When not set, will be set based on I<sup>2</sup>C detection. Can be changed manually.",
+        "BleAddress": {
+            "name": "ArtNetTriggerEnabled",
+            "description": "Enable ArtNet Trigger Processing",
+            "tip": "Enable ArtNet Trigger Processing",
             "restart": 1,
             "reboot": 0,
-            "type": "select",
-            "options": {
-                "SELECT TRANSMITTER": "None",
-                "QN8066": "QN8066",
-                "Si4713 (planned for future release)": "zzSi4713"
-            },
-            "default": "None",
-            "children": {
-                "QN8066": [
-                  "DynRDSQN8066Gain",
-                  "DynRDSQN8066SoftClipping",
-                  "DynRDSQN8066AGC",
-                  "DynRDSQN8066ChipPower",
-                  "DynRDSQN8066PIPWM",
-                  "DynRDSQN8066AmpPower"
-                ],
-                "Si4713": [
-                  "DynRDSSi4713TestAudio"
-                ]
-            }
-        },
-        "DynRDSStart": {
-            "name": "DynRDSStart",
-            "description": "Start with",
-            "tip": "When starting, the transmitter is reset, settings initialized, will broadcast any audio played, and send static RDS messages (if enabled).",
-            "restart": 1,
-            "reboot": 0,
-            "type": "select",
-            "options": {
-                "FPPD Start (default)": "FPPDStart",
-                "Playlist Start": "PlaylistStart",
-                "Never": "Never"
-            },
-            "default": "FPPDStart"
-        },
-        "DynRDSStop": {
-            "name": "DynRDSStop",
-            "description": "Stop with",
-            "tip": "When stopped, the transmitter is reset. Listeners will hear static.",
-            "restart": 1,
-            "reboot": 0,
-            "type": "select",
-            "options": {
-                "Playlist Stop": "PlaylistStop",
-                "Never (default)": "Never"
-            },
-            "default": "Never"
-        },
-        "DynRDSQN8066ChipPower": {
-            "name": "DynRDSQN8066ChipPower",
-            "description": "Chip Power (92-122)",
-            "tip": "Adjust the power output from the transmitter chip",
-            "restart": 1,
-            "reboot": 0,
-            "type": "number",
-            "min": 92,
-            "max": 122,
-            "step": 1,
-            "suffix": "dB&mu;V",
-            "default": 122
-	},
-        "DynRDSQN8066PIPWM": {
-            "name": "DynRDSQN8066PIPWM",
-            "description": "Enable PWM",
-            "tip": "Enables Raspberry Pi hardware-based PWM on Pin 12 / GPIO 18 by default. Used to control the Amp Power. This requires the on-board audio to be disabled as it also used the PWM hardware, so an external sound card is required.",
-            "suffix": "- Disables on-board audio, external sound card required",
-            "restart": 0,
-            "reboot": 1,
             "type": "checkbox",
-            "checkedValue": "1",
-            "uncheckedValue": "0",
             "default": 0,
             "children": {
                 "1": [
-                    "DynRDSQN8066AmpPower",
-                    "DynRDSAdvPIPWMPin"
-                     ]
+                    "ArtNetTriggerOEMCode"
+                ]
+            }
+        },
+        "ArtNetTriggerOEMCode": {
+            "name": "ArtNetTriggerOEMCode",
+            "description": "OEM Code (hex) for Trigger",
+            "tip": "The OEM Code to look for to process triggers.  The payload will be a FPP Command JSON.",
+            "restart": 1,
+            "reboot": 0,
+            "default": "0x21s00",
+            "type": "text",
+            "size": 6,
+            "maxlength": "6"
+        },
+        "ArtNetTimeCodeEnabled": {
+            "name": "ArtNetTimeCodeEnabled",
+            "description": "Enable ArtNet Timecode",
+            "tip": "Enable ArtNet Timecode",
+            "restart": 1,
+            "reboot": 0,
+            "type": "checkbox",
+            "default": 0,
+            "children": {
+                "1": [
+                    "ArtNetTimeCodeType",
+                    "ArtNetTimeCodeHourIsIndex",
+                    "ArtNetTimeCodeTarget",
+                    "ArtNetSyncPlaylist"
+                ]
+            }
+        },
+        "ArtNetTimeCodeProcessing": {
+            "name": "ArtNetTimeCodeProcessing",
+            "description": "Time Code Position Processing",
+            "tip": "How timecodes and playlists are matched",
+            "restart": 1,
+            "reboot": 0,
+            "default": 0,
+            "type": "select",
+            "options": {
+                "Time within full playlist": 0,
+                "Hour is index": 1,
+                "1/4 hour is index": 2,
+                "Time Codes within items": 3
+            }
+        },
+        "ArtNetTimeCodeType": {
+            "name": "ArtNetTimeCodeType",
+            "description": "ArtNet TimeCode Type",
+            "tip": "The format of the TimeCode",
+            "restart": 1,
+            "reboot": 0,
+            "default": 3,
+            "type": "select",
+            "options": {
+                "24fps": 0,
+                "25fps": 1,
+                "29.97fps": 2,
+                "30fps": 3
             },
-            "platforms": [
-                "Raspberry Pi"
+            "fppModes": [
+                "player"
             ]
         },
-        "DynRDSQN8066AmpPower": {
-            "name": "DynRDSQN8066AmpPower",
-            "description": "Amp Power (0-100)",
-            "tip": "Adjust the power output for the amplifier after the transmitter chip. This is controlled by PWM output.",
-            "suffix": "<i class='fas fa-fw fa-bolt fa-nbsp ui-level-1'></i> - Controlled by PWM",
-            "restart": 0,
-            "reboot": 0,
-            "type": "number",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "default": 0
-	},
-        "DynRDSFrequency": {
-            "name": "DynRDSFrequency",
-            "description": "Frequency (60.00-108.00)",
-            "tip": "Broadcast frequency of the transmitter",
-            "restart": 1,
-            "reboot": 0,
-            "type": "number",
-            "min": 60.00,
-            "max": 108.00,
-            "step": 0.05,
-            "suffix": "MHz",
-            "default": 100.10
-        },
-        "DynRDSPreemphasis": {
-            "name": "DynRDSPreemphasis",
-            "description": "Preemphasis",
-            "tip": "Used in FM broadcast to improve quality of higher frequencies. Most of the world uses 50&mu;s, except the US and South Korea at 75&mu;s",
-            "restart": 1,
-            "reboot": 0,
-            "type": "select",
-            "options": {
-                "75 &mu;s (USA, default)": "75us",
-                "50 &mu;s (Europe, Australia, Japan)": "50us"
-            },
-            "default": "75us"
-        },
-        "DynRDSQN8066Gain": {
-            "name": "DynRDSQN8066Gain",
-            "description": "Gain Adjustment (-15 to +20)",
-            "tip": "Adjust volume of broadcast audio. In testing, if this is too high or low the audio will be distorted, cut out randomly, or no audio will be heard.",
-            "restart": 0,
-            "reboot": 0,
-            "type": "number",
-            "min": -15,
-            "max": 20,
-            "step": 1,
-            "default": 0,
-            "suffix": "<i class='fas fa-fw fa-bolt fa-nbsp ui-level-1'></i>"
-        },
-        "DynRDSQN8066SoftClipping": {
-            "name": "DynRDSQN8066SoftClipping",
-            "description": "Enable Soft Clipping",
-            "restart": 0,
-            "reboot": 0,
-            "type": "checkbox",
-            "checkedValue": "1",
-            "uncheckedValue": "0",
-            "default": 1,
-            "suffix": "<i class='fas fa-fw fa-bolt fa-nbsp ui-level-1'></i>"
-        },
-        "DynRDSQN8066AGC": {
-            "name": "DynRDSQN8066AGC",
-            "description": "Enable AGC (not recommended)",
-            "restart": 0,
-            "reboot": 0,
-            "type": "checkbox",
-            "checkedValue": "1",
-            "uncheckedValue": "0",
-            "default": 0,
-            "suffix": "<i class='fas fa-fw fa-bolt fa-nbsp ui-level-1'></i>"
-        },
-        "DynRDSSi4713TestAudio": {
-            "name": "DynRDSSi4713TestAudio",
-            "description": "Test Si4713 Setting",
-            "type": "text"
-        },
-        "DynRDSEnableRDS": {
-            "name": "DynRDSEnableRDS",
-            "description": "Enable RDS",
-            "restart": 1,
-            "reboot": 0,
-            "type": "checkbox",
-            "checkedValue": "1",
-            "uncheckedValue": "0",
-            "default": 1,
-            "children": {
-                "1": [
-                    "DynRDSPICode",
-                    "DynRDSPty",
-                    "DynRDSPSUpdateRate",
-                    "DynRDSPSStyle",
-                    "DynRDSRTUpdateRate",
-                    "DynRDSRTSize",
-                    "DynRDSRTStyle"
-                ]
-            }
-        },
-        "DynRDSPSStyle": {
-            "name": "DynRDSPSStyle",
-            "description": "PS Style Text (8 chars per update)",
-            "tip": "Sent 8 characters at a time. Program Service is the most commonly displayed part of RDS.",
-            "restart": 1,
-            "reboot": 0,
+        "ArtNetTimeCodeTarget": {
+            "name": "ArtNetTimeCodeTarget",
+            "description": "Target IP Addresses",
+            "tip": "Target IP Addresses for ArtNet TimeCode (comma separated)",
+            "default": "255.255.255.255",
             "type": "text",
-            "size": 32,
-            "maxlength": 64,
-            "default": "Merry|Christ-|  -mas!|{T}|{A}|[{N} of {C}]"
-        },
-        "DynRDSPSUpdateRate": {
-            "name": "DynRDSPSUpdateRate",
-            "description": "PS Update Rate",
-            "tip": "Interval between updating the 8 characters being sent. It takes ~1 second to send the 8 characters and some radios only display the text after receiving the full group twice.",
-            "suffix": "seconds",
-            "restart": 1,
-            "reboot": 0,
-            "type": "number",
-            "min": 3,
-            "max": 60,
-            "step": 1,
-            "default": 4
-        },
-        "DynRDSRTStyle": {
-            "name": "DynRDSRTStyle",
-            "description": "RT Style Text",
-            "tip": "Sent up to 64 characters at a time. Radio Text is intended for longer message with a slower update rate.",
-            "restart": 1,
-            "reboot": 0,
-            "type": "text",
-            "size": 64,
+            "size": 37,
             "maxlength": 256,
-            "default": "Merry Christmas!|{T}[ by {A}]|[Track {N} of {C}]"
-        },
-        "DynRDSRTUpdateRate": {
-            "name": "DynRDSRTUpdateRate",
-            "description": "RT Update Rate",
-            "tip": "Interval between updating the 64 characters being sent. It takes ~4 seconds to send the 64 characters and some radios only display the text after receiving the full group twice.",
-            "suffix": "seconds",
-            "restart": 1,
-            "reboot": 0,
-            "type": "number",
-            "min": 3,
-            "max": 60,
-            "step": 1,
-            "default": 8
-        },
-        "DynRDSRTSize": {
-            "name": "DynRDSRTSize",
-            "description": "RT Update Size",
-            "tip": "While RadioText (RT) can be up to 64 characters at a time, not all radios will display everything at the same time. A smaller setting is recommended.",
-            "restart": 1,
-            "reboot": 0,
-            "type": "number",
-            "min": 8,
-            "max": 64,
-            "step": 1,
-            "default": 32,
-            "suffix": "characters"
-        },
-        "DynRDSPty": {
-            "name": "DynRDSPty",
-            "description": "Program Type",
-            "tip": "Predefined Program Types with different assignments between North America and Europe",
-            "restart": 1,
-            "reboot": 0,
-            "type": "select",
-            "options": {
-               "0 - None / None": 0,
-               "1 - News / News": 1,
-               "2 - Information / Current Affairs": 2,
-               "3 - Sport / Information": 3,
-               "4 - Talk / Sport": 4,
-               "5 - Rock / Education": 5,
-               "6 - Classic Rock / Drama": 6,
-               "7 - Adult Hits / Culture": 7,
-               "8 - Soft Rock / Science": 8,
-               "9 - Top 40 / Varied": 9,
-               "10 - Country / Pop": 10,
-               "11 - Oldies / Rock": 11,
-               "12 - Soft Music / Easy Listening": 12,
-               "13 - Nostalgia / Light Classical": 13,
-               "14 - Jazz / Serious Classical": 14,
-               "15 - Classical / Other Music": 15,
-               "16 - R&B / Weather": 16,
-               "17 - Soft R&B / Finance": 17,
-               "18 - Language / Childrens": 18,
-               "19 - Religious Music / Social Affairs": 19,
-               "20 - Religious Talk / Religion": 20,
-               "21 - Personality / Phone-In": 21,
-               "22 - Public / Travel": 22,
-               "23 - College / Leisure": 23,
-               "24 - Spanish Talk / Jazz": 24,
-               "25 - Spanish Music / Country": 25,
-               "26 - Hip Hop / National Music": 26,
-               "27 - --- / Oldies": 27,
-               "28 - --- / Folk": 28,
-               "29 - Weather / Documentary": 29
-            },
-            "default": 2,
-            "suffix": "North America / Europe"
-        },
-        "DynRDSPICode": {
-            "name": "DynRDSPICode",
-            "description": "PI Code",
-            "tip": "Unique program indentification code. While no longer the standard in the US, some older recievers will attempt to translate the PI code to a callsign. Can use 819b for WRAP or 5F64 for WEBS. You can search at https://picodes.nrscstandards.org for unused codes or calculate your own at https://caseymediallc.com/rdsreverse. First character of callsign is limited to W or K.",
-            "restart": 1,
-            "reboot": 0,
-            "type": "text",
-            "size": 4,
-            "maxlength": 4,
-            "default": "819b"
-        },
-        "DynRDSCallbackLogLevel": {
-            "name": "DynRDSCallbackLogLevel",
-            "description": "Logging Level for Callback",
-            "restart": 0,
-            "reboot": 0,
-            "type": "select",
-            "options": {
-               "Errors Only": "ERROR",
-               "Warn": "WARNING",
-               "Info": "INFO",
-               "Debug": "DEBUG"
-            },
-            "default": "INFO"
-        },
-        "DynRDSEngineLogLevel": {
-            "name": "DynRDSEngineLogLevel",
-            "description": "Logging Level for Engine",
-            "restart": 0,
-            "reboot": 0,
-            "type": "select",
-            "options": {
-               "Errors Only": "ERROR",
-               "Warn": "WARNING",
-               "Info": "INFO",
-               "Debug": "DEBUG",
-               "Excessive": "EXCESSIVE"
-            },
-            "default": "INFO"
-        },
-        "DynRDSmpcEnable": {
-            "name": "DynRDSmpcEnable",
-            "description": "Enable MPC support",
-            "tip": "Pulls %title% from mpc and displays it as {T} in the RDS Style Text",
-            "restart": 0,
-            "reboot": 0,
-            "type": "checkbox",
-            "checkedValue": "1",
-            "uncheckedValue": "0",
-            "default": 0,
-            "suffix": "<i class='fas fa-fw fa-bolt fa-nbsp ui-level-1'></i>"
-        },
-        "DynRDSmqttEnable": {
-            "name": "DynRDSmqttEnable",
-            "description": "Enable MQTT",
-            "tip": "Enables Dynamic_RDS to publish status to MQTT",
-            "restart": 0,
-            "reboot": 0,
-            "type": "checkbox",
-            "checkedValue": "1",
-            "uncheckedValue": "0",
-            "default": 0,
-            "suffix": ""
-        },
-        "DynRDSAdvPISoftwareI2C": {
-            "name": "DynRDSAdvPISoftwareI2C",
-            "description": "Use PI Software I<sup>2</sup>C",
-            "tip": "Switches PI from hardware I<sup>2</sup>C to software I<sup>2</sup>C in /boot/config.txt",
-            "restart": 0,
-            "reboot": 1,
-            "type": "checkbox",
-            "checkedValue": "1",
-            "uncheckedValue": "0",
-            "default": 0,
-            "platforms": [
-                "Raspberry Pi"
+            "fppModes": [
+                "player"
             ]
         },
-        "DynRDSAdvPIPWMPin": {
-            "name": "DynRDSAdvPIPWMPin",
-            "description": "PI PWM Pin",
-            "tip": "Select which Pin/GPIO has the PWM output. PWM0/1 are for true hareware-generated PWM, but is limited to specific pins. This uses the PWM hardware, so on-board audio is still disabled and an external sound card is needed.",
-            "restart": 0,
-            "reboot": 1,
+        "ArtNetSyncPlaylist": {
+            "name": "ArtNetSyncPlaylist",
+            "description": "Playlist to sync the ArtNet TimeCode",
             "type": "select",
-            "options": {
-               "PWM0 - Pin 12 / GPIO 18 (default)": "18,2",
-               "PWM0 - Pin 32 / GPIO 12": "12,4",
-               "PWM1 - Pin 33 / GPIO 13": "13,4",
-               "PWM1 - Pin 35 / GPIO 19": "19,2",
-               "Software - Pin 7 / GPIO 4": "7",
-               "Software - Pin 8 / GPIO 14": "8",
-               "Software - Pin 10 / GPIO 15": "10",
-               "Software - Pin 11 / GPIO 17": "11",
-               "Software - Pin 13 / GPIO 27": "13",
-               "Software - Pin 15 / GPIO 22": "15",
-               "Software - Pin 16 / GPIO 23": "16",
-               "Software - Pin 18 / GPIO 24": "18",
-               "Software - Pin 22 / GPIO 25": "22",
-               "Software - Pin 27 / GPIO 0": "27",
-               "Software - Pin 28 / GPIO 1": "28",
-               "Software - Pin 29 / GPIO 5": "29",
-               "Software - Pin 31 / GPIO 6": "31",
-               "Software - Pin 36 / GPIO 16": "36",
-               "Software - Pin 37 / GPIO 26": "37"
-            },
-            "default": "18,2",
-            "platforms": [
-                "Raspberry Pi"
-            ]
-        },
-        "DynRDSAdvBBBPWMPin": {
-            "name": "DynRDSAdvBBBPWMPin",
-            "description": "BBB PWM Pin",
-            "tip": "Select which Pin has the PWM output.",
-            "restart": 1,
-            "reboot": 0,
-            "type": "select",
-            "options": {
-               "PWM0A - Pin P9_22": "P9_22,0,A",
-               "PWM0A - Pin P9_31": "P9_31,0,A",
-               "PWM0B - Pin P9_21": "P9_21,0,B",
-               "PWM0B - Pin P9_29": "P9_29,0,B",
-               "PWM1A - Pin P9_14": "P9_14,1,A",
-               "PWM1A - Pin P8_36": "P8_36,1,A",
-               "PWM1B - Pin P9_16 (default)": "P9_16,1,B",
-               "PWM1B - Pin P8_34": "P8_34,1,B",
-               "PWM2A - Pin P8_19": "P8_19,2,A",
-               "PWM2A - Pin P8_45": "P8_45,2,A",
-               "PWM2B - Pin P8_13": "P8_13,2,B",
-               "PWM2B - Pin P8_46": "P8_46,2,B"
-            },
-            "default": "P9_16,1,B",
-            "platforms": [
-                "BeagleBone Black"
+            "default": "",
+            "optionsURL": "api/playlists",
+            "optionCanBeBlank": true,
+            "fppModes": [
+                "remote"
             ]
         }
+
     }
 }
