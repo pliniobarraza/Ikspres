@@ -98,7 +98,7 @@
             "restart": 1,
             "reboot": 0,
             "type": "number",
-            "default": 3
+            "default": 1
         },     
         
         "IkspresPwm330mA": {
