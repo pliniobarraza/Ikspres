@@ -30,7 +30,7 @@
             "default": 0,
             "children": {
                 "1": [
-                    "ArtNetTriggerOEMCode"
+                    "BleAddress"
                 ]
             }
         },
