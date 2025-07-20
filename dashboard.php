@@ -1,5 +1,17 @@
 
+<?
+ /api/plugin/Ikspres/settings/IkspresPwm330mA
+  def readAPISetting(self, settingName):
+    try:
+      with urlopen(f'http://localhost/api/plugin/Ikspres/settings/IkspresPwm330mA') as response:
+        return json.loads(response.read())
+    except Exception:
+      logging.exception("readAPISetting %s", settingName)
+    return ''
 
+    value=self.readAPISetting('HostName')['value']
+
+?>
 <h1>FPP-ɪkspres</h1>
 
 
