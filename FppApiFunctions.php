@@ -9,7 +9,7 @@ function fppApiIkspresSetting($setting){
   $response_json = curl_exec($ch);
   curl_close($ch);
   $response=json_decode($response_json, true); 
-  return $response[setting];
+  return $response[$setting];
 }
 //print_r(fppApiIkspresSetting('IkspresPwm330mA'));
 
