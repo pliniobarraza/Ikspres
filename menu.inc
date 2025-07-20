@@ -17,7 +17,7 @@ $menuEntries = Array(
 		'type' => 'status',
 		'page' => 'dashboard.php',
 		'wrap' => 1
-	)
+	),
 	Array(
 		'text' => 'Ikspres Config',
 		'type' => 'content',
