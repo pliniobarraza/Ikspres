@@ -1,15 +1,14 @@
 
 <?
 
-  def readAPISetting(self, settingName):
-    try:
-      with urlopen(f'http://localhost/api/plugin/Ikspres/settings/IkspresPwm330mA') as response:
-        return json.loads(response.read())
-    except Exception:
-      logging.exception("readAPISetting %s", settingName)
-    return ''
-
-    value=self.readAPISetting('HostName')['value']
+$url = 'http://localhost/api/plugin/Ikspres/settings/IkspresPwm330mA';
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_HTTPGET, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response_json = curl_exec($ch);
+curl_close($ch);
+$response=json_decode($response_json, true);
+print_r($response);
 
 ?>
 <h1>FPP-ɪkspres</h1>
