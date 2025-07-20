@@ -1,7 +1,7 @@
 
 <?
 include("FppApiFunctions.php");
-//print_r(fppApiIkspresSetting('IkspresPwm330mA'));
+print_r(fppApiIkspresSetting('IkspresPwm330mA'));
 
 
 
