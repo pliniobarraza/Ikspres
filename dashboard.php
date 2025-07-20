@@ -1,6 +1,16 @@
 
 
 <h1>FPP-ɪkspres</h1>
+
+
+<div class="card has-shadow playlistCard buttonActionsParent">
+  <h2 class="card-title">wɪp</h2>
+  <div class="text-center"><p class="card-text mb-2 text-muted">TEXT</p></div>
+  <div class="buttonActions">
+    <button class="playlistCardEditButton circularButton circularButton-sm circularEditButton">Edit</button>
+  </div>
+</div>
+
 <div class="backdrop fppPluginEntryBackdrop">
   <h2>wɪp</h2>
   <div class="row">
