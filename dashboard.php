@@ -11,7 +11,7 @@
   </div>
 </div>
 <?
-pring_r($settings);
+print_r($settings);
 ?>
 <div class="backdrop fppPluginEntryBackdrop">
   <h2>wɪp</h2>
