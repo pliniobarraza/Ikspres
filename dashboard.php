@@ -8,7 +8,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $response_json = curl_exec($ch);
 curl_close($ch);
 $response=json_decode($response_json, true);
-print_r($response);
+print_r($response['IkspresPwm330mA']);
 
 ?>
 <h1>FPP-ɪkspres</h1>
