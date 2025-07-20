@@ -7,6 +7,7 @@
                 "IkspresPwm330mAChannels",
                 "IkspresZcAcDim",
                 "IkspresZcAcDimChannels",
+                "IkspersWip",
                 "WipPwm330mA",
                 "WipPwm330mAChannels",
                 "WipZcAcDim",
@@ -32,6 +33,24 @@
     },
     "settings": {
 
+
+        "IkspersWip": {
+            "name": "IkspersWip",
+            "description": "Entagle Wip",
+            "tip": "Enable Wireless Ikspress Module",
+            "restart": 1,
+            "reboot": 0,
+            "type": "checkbox",
+            "default": 0,
+            "children": {
+                "1": [
+                    "WipPwm330mA",
+                    "WipPwm330mAChannels",
+                    "WipZcAcDim",
+                    "WipZcAcDimChannels"
+                ]
+            }
+        },              
 
         "IkspresPwm330mA": {
             "name": "IkspresPwm330mA",
