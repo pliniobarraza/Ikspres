@@ -4,8 +4,10 @@
 
 
 <div class="backdrop fppPluginEntryBackdrop"><div class="row">
-  <div class="col-lg-3"><h3 class="pluginTitle">FPP-Ikspres</h3><div class="text-success fppPluginEntryInstallStatus">
-    <i class="far fa-check-circle"></i> <b>Installed</b>
+  <div class="col-lg-3"><h3 class="pluginTitle">FPP-Ikspres</h3>
+    <div class="text-success fppPluginEntryInstallStatus">
+      <i class="far fa-check-circle"></i> <b>Installed</b>
+    </div>
   </div>
 </div>
 
