@@ -24,8 +24,8 @@
             "tip": "Use the discover button if unkwons",
             "restart": 1,
             "reboot": 0,
-            "type": "checkbox",
-            "default": 0,
+            "type": "text",
+            "default": "123123123",
             "children": {
                 "1": [
                     "BleAcChannels"
