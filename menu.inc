@@ -21,7 +21,7 @@ $menuEntries = Array(
 	Array(
 		'text' => 'Ikspres Config',
 		'type' => 'content',
-		'page' => 'content.php',
+		'page' => 'capabilities.php',
 		'wrap' => 1
 	),
 	Array(
