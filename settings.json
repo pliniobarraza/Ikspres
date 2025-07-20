@@ -31,6 +31,34 @@
         }
     },
     "settings": {
+
+
+        "IkspresPwm330mA": {
+            "name": "IkspresPwm330mA",
+            "description": "Enable Onboard 330mA LED Drivers",
+            "tip": "Enable Onboard 330mA LED Driver Support",
+            "restart": 1,
+            "reboot": 0,
+            "type": "checkbox",
+            "default": 0,
+            "children": {
+                "1": [
+                    "IkspresPwm330mAChannels"
+                ]
+            }
+        },
+
+        
+        "IkspresPwm330mAChannels": {
+            "name": "IkspresPwm330mAChannels",
+            "description": "Number of Onboard 330mA LED Drivers",
+            "tip": "Enable Onboard 330mA LED Driver Support",
+            "restart": 1,
+            "reboot": 0,
+            "type": "number",
+            "default": 3
+        },        
+        
         "WipEnable": {
             "name": "WipEnable",
             "description": "Enable ArtNet Trigger Processing",
