@@ -35,8 +35,8 @@
 
         "IkspresPwm330mA": {
             "name": "IkspresPwm330mA",
-            "description": "Enable Onboard 330mA LED Drivers",
-            "tip": "Enable Onboard 330mA LED Driver Support",
+            "description": "Onboard 330mA LED Drivers",
+            "tip": "Enable Onboard PWM 330mA LED Support",
             "restart": 1,
             "reboot": 0,
             "type": "checkbox",
@@ -46,18 +46,42 @@
                     "IkspresPwm330mAChannels"
                 ]
             }
-        },
-
-        
+        },        
         "IkspresPwm330mAChannels": {
             "name": "IkspresPwm330mAChannels",
-            "description": "Number of Onboard 330mA LED Drivers",
-            "tip": "Enable Onboard 330mA LED Driver Support",
+            "description": "Channels",
+            "tip": "Number of onboard 330mA Channels",
             "restart": 1,
             "reboot": 0,
             "type": "number",
             "default": 3
+        },     
+
+
+
+        "IkspresZcAcDim": {
+            "name": "IkspresZcAcDim",
+            "description": "Onboard AC Dimmer Driver",
+            "tip": "Enable Onboard ZeroCross AC Dimmer Support",
+            "restart": 1,
+            "reboot": 0,
+            "type": "checkbox",
+            "default": 0,
+            "children": {
+                "1": [
+                    "IkspresPwm330mAChannels"
+                ]
+            }
         },        
+        "IkspresZcAcDimChannels": {
+            "name": "IkspresZcAcDimChannels",
+            "description": "Number of Channels",
+            "tip": "Number of onboard AC Channels",
+            "restart": 1,
+            "reboot": 0,
+            "type": "number",
+            "default": 1
+        },            
         
         "WipEnable": {
             "name": "WipEnable",
