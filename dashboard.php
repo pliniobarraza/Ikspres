@@ -16,9 +16,6 @@
     <button class="playlistCardEditButton circularButton circularButton-sm circularEditButton">Edit</button>
   </div>
 </div>
-<?
-print_r($settings);
-?>
 <div class="backdrop fppPluginEntryBackdrop">
   <h2>wɪp</h2>
   <div class="row">
