@@ -2,6 +2,15 @@
 
 <h1>ɪkspres</h1>
 
+
+<div class="backdrop fppPluginEntryBackdrop"><div class="row">
+  <div class="col-lg-3"><h3 class="pluginTitle">FPP-Ikspres</h3><div class="text-success fppPluginEntryInstallStatus">
+    <i class="far fa-check-circle"></i> <b>Installed</b>
+  </div>
+</div>
+
+
+<h2>wɪp</h2><div class="callout callout-default">wɪp</div>
 <div id="global" class="settings">
   <div class="callout callout-danger">Unable to create ZIP file to download</div>
   <div class="callout callout-warning">On-board sound card appears active and will interfere with hardware PWM. Try a reboot first, next toggle the Enable PI Hardware PWM setting below and reboot. If issues persist check /boot/config.txt and comment out dtparam=audio=on</div>
@@ -16,7 +25,7 @@
     <li>{B} = Album</li>
     <li>{G} = Genre</li></ul>
   </div>
-  <h2>wɪp</h2><div class="callout callout-default">wɪp</div>
+  
 
   <button name="ReinstallScript" onClick="">Reinstall plugin dependencies</button>
   HERE WE WILL BE ABLE TO CONFIGURE AND CONTROLL IKSPRESS
