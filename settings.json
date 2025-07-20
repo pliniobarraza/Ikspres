@@ -52,6 +52,55 @@
             }
         },              
 
+        "WipPwm330mA": {
+            "name": "WipPwm330mA",
+            "description": "Onboard 330mA LED Drivers",
+            "tip": "Enable Onboard PWM 330mA LED Support",
+            "restart": 1,
+            "reboot": 0,
+            "type": "checkbox",
+            "default": 0,
+            "children": {
+                "1": [
+                    "IkspresPwm330mAChannels"
+                ]
+            }
+        },        
+        "WipPwm330mAChannels": {
+            "name": "WipPwm330mAChannels",
+            "description": "Channels",
+            "tip": "Number of onboard 330mA Channels",
+            "restart": 1,
+            "reboot": 0,
+            "type": "number",
+            "default": 3
+        },     
+
+
+        "WipZcAcDim": {
+            "name": "WipZcAcDim",
+            "description": "Onboard 330mA LED Drivers",
+            "tip": "Enable Onboard PWM 330mA LED Support",
+            "restart": 1,
+            "reboot": 0,
+            "type": "checkbox",
+            "default": 0,
+            "children": {
+                "1": [
+                    "IkspresPwm330mAChannels"
+                ]
+            }
+        },        
+        "WipZcAcDimChannels": {
+            "name": "WipZcAcDimChannels",
+            "description": "Channels",
+            "tip": "Number of onboard 330mA Channels",
+            "restart": 1,
+            "reboot": 0,
+            "type": "number",
+            "default": 3
+        },     
+        
         "IkspresPwm330mA": {
             "name": "IkspresPwm330mA",
             "description": "Onboard 330mA LED Drivers",
