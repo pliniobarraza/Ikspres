@@ -1,5 +1,18 @@
 {
     "settingGroups": {
+        "IkspresConfig": {
+            "description": "Ikspres Capabilities Configuration",
+            "settings": [
+                "IkspresPwm330mA",
+                "IkspresPwm330mAChannels",
+                "IkspresZcAcDim",
+                "IkspresZcAcDimChannels",
+                "WipPwm330mA",
+                "WipPwm330mAChannels",
+                "WipZcAcDim",
+                "WipZcAcDimChannels"
+            ]
+        },
         "LocalModel": {
             "description": "Local Model Configuration",
             "settings": [
