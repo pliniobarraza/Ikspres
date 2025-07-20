@@ -11,6 +11,6 @@ function fppApiIkspresSetting(setting){
   $response=json_decode($response_json, true); 
   return $response[setting];
 }
-print_r(fppApiIkspresSetting('IkspresPwm330mA'));
+//print_r(fppApiIkspresSetting('IkspresPwm330mA'));
 
 ?>
