@@ -20,7 +20,7 @@
         }
     },
     "settings": {
-        "BleAddress": {
+        "WipEnable": {
             "name": "WipEnable",
             "description": "Enable ArtNet Trigger Processing",
             "tip": "Enable ArtNet Trigger Processing",
