@@ -1,6 +1,6 @@
 
 <?
- /api/plugin/Ikspres/settings/IkspresPwm330mA
+
   def readAPISetting(self, settingName):
     try:
       with urlopen(f'http://localhost/api/plugin/Ikspres/settings/IkspresPwm330mA') as response:
