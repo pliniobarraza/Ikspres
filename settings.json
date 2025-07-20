@@ -62,7 +62,7 @@
             "default": 0,
             "children": {
                 "1": [
-                    "IkspresPwm330mAChannels"
+                    "WipPwm330mAChannels"
                 ]
             }
         },        
@@ -87,7 +87,7 @@
             "default": 0,
             "children": {
                 "1": [
-                    "IkspresPwm330mAChannels"
+                    "WipZcAcDimChannels"
                 ]
             }
         },        
@@ -137,7 +137,7 @@
             "default": 0,
             "children": {
                 "1": [
-                    "IkspresPwm330mAChannels"
+                    "IkspresZcAcDimChannels"
                 ]
             }
         },        
