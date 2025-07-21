@@ -3,7 +3,7 @@
 include("FppApiFunctions.php");
 print_r(fppApiIkspresSetting('IkspresPwm330mA'));
 //echo(gettype(fppApiIkspresSetting('IkspresPwm330mA')));
-if(fppApiIkspresSetting('IkspresPwm330mA')=="1"){
+if(fppApiIkspresSetting('IkspresPwm330mA')){
   echo(gettype(fppApiIkspresSetting('IkspresPwm330mAChannels')));
   echo(fppApiIkspresSetting('IkspresPwm330mAChannels'));
   for ($i = 1; $i <= fppApiIkspresSetting('IkspresPwm330mAChannels'); $i++) {
