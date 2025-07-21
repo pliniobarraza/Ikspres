@@ -54,8 +54,8 @@
 
         "WipPwm330mA": {
             "name": "WipPwm330mA",
-            "description": "Onboard 330mA LED Drivers",
-            "tip": "Enable Onboard PWM 330mA LED Support",
+            "description": "Wip 330mA LED Drivers",
+            "tip": "Enable Wip PWM 330mA LED Support",
             "restart": 1,
             "reboot": 0,
             "type": "checkbox",
@@ -69,7 +69,7 @@
         "WipPwm330mAChannels": {
             "name": "WipPwm330mAChannels",
             "description": "Channels",
-            "tip": "Number of onboard 330mA Channels",
+            "tip": "Number of Wip 330mA Channels",
             "restart": 1,
             "reboot": 0,
             "type": "number",
@@ -79,8 +79,8 @@
 
         "WipZcAcDim": {
             "name": "WipZcAcDim",
-            "description": "Onboard 330mA LED Drivers",
-            "tip": "Enable Onboard PWM 330mA LED Support",
+            "description": "Wip ZCAC Drivers",
+            "tip": "Enable Wip Zero Cross AC dimmer Support",
             "restart": 1,
             "reboot": 0,
             "type": "checkbox",
@@ -94,7 +94,7 @@
         "WipZcAcDimChannels": {
             "name": "WipZcAcDimChannels",
             "description": "Channels",
-            "tip": "Number of onboard 330mA Channels",
+            "tip": "Number of Wuo Zero Criis AC Dimmer Channels",
             "restart": 1,
             "reboot": 0,
             "type": "number",
