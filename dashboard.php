@@ -2,7 +2,11 @@
 <?
 include("FppApiFunctions.php");
 print_r(fppApiIkspresSetting('IkspresPwm330mA'));
-
+if(fppApiIkspresSetting('IkspresPwm330mA')==1){
+  for ($i = 1; $i <= fppApiIkspresSetting('IkspresPwm330mAChannels'); $i++) {
+    echo $i;
+  }
+}
 
 
 ?>
